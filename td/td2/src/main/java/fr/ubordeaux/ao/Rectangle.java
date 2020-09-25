@@ -5,15 +5,15 @@ public class Rectangle extends Shape{
     int height;
 
     public Rectangle(int width, int height){
+        super(0,0);
         this.width = width;
         this.height = height;
-        super(0,0);
     }
 
     public Rectangle(int x, int y, int width, int height) {
+        super(x,y);
         this.width = width;
         this.height = height;
-        super(x,y);
     }
 
     public String toSVG(){

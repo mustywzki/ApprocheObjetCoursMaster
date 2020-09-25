@@ -1,16 +1,17 @@
 package fr.ubordeaux.ao;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class SVG {
     private int width;
-    private int heigth;
+    private int height;
     private ArrayList<Shape> shapes;
 
 
-    public SVG(int width, int heigth) {
+    public SVG(int width, int height) {
         this.width = width;
-        this.heigth = heigth;
+        this.height = height;
         shapes = new ArrayList<Shape>();
     }
 
@@ -18,13 +19,13 @@ public class SVG {
         shapes.add(s);
     }
 
-    public void CreateSVG(){
+    public void createSVG(){
         try(FileWriter writer = new FileWriter("shapes.svg");
             BufferedWriter bw = new BufferedWriter(writer)) {
 
-        bw.write("<svg width=\"" + this.width "\" height=\"" + this.height + "\">\n");
+        bw.write("<svg width=\"" + this.width + "\" height=\"" + this.height + "\">\n");
         for ( Shape s : shapes){
-            bw.write(s.toSVG);
+            bw.write(s.toSVG());
             }
         bw.write("</svg>");
         } catch (IOException e) {
