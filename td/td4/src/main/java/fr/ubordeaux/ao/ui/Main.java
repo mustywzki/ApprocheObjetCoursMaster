@@ -1,3 +1,7 @@
+package fr.ubordeaux.ao.ui;
+
+import fr.ubordeaux.ao.domain.*;
+
 public class Main {
     public static void main (String[] args){
         Client c = new Client("Jean");

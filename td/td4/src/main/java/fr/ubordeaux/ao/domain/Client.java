@@ -1,13 +1,15 @@
+package fr.ubordeaux.ao.domain;
+
 public class Client {
     String name;
     Basket basket;
 
-    Client(String name){
+    public Client(String name){
         this.name = name;
         basket = new Basket();
     }
 
-    Basket getBasket(){
+    public Basket getBasket(){
         return basket;
     }
     

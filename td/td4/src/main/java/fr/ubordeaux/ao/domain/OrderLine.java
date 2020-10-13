@@ -1,3 +1,5 @@
+package fr.ubordeaux.ao.domain;
+
 public class OrderLine {
     Reference ref;
     int amount;

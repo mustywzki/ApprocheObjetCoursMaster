@@ -1,3 +1,5 @@
+package fr.ubordeaux.ao.domain;
+
 import java.util.HashMap;
 
 public class Basket {
@@ -5,7 +7,7 @@ public class Basket {
     private int price;
     private boolean locked;
 
-    Basket(){
+    public Basket(){
         Orders = new HashMap<Reference,OrderLine>();
         this.price = 0;
         locked = false;
