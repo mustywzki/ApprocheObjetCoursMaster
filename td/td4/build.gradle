@@ -18,7 +18,7 @@ dependencies {
 }
 
 apply plugin: 'application'
-mainClassName = "fr.ubordeaux.ao.ui.ConsoleMain"
+mainClassName = "fr.ubordeaux.ao.ConsoleMain"
 
 run {
    standardInput = System.in
