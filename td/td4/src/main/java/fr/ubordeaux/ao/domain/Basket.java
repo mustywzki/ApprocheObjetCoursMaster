@@ -3,11 +3,13 @@ package fr.ubordeaux.ao.domain;
 import java.util.HashMap;
 
 public class Basket {
+    private int id;
     private HashMap<Reference,OrderLine> Orders;
     private int price;
     private boolean locked;
 
     public Basket(){
+        this.id = this.hashCode();
         Orders = new HashMap<Reference,OrderLine>();
         this.price = 0;
         locked = false;
@@ -33,5 +35,9 @@ public class Basket {
 
     public int getPrice(){
         return price;
+    }
+
+    public int getId(){
+        return id;
     }
 }
